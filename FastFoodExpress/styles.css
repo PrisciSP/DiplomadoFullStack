@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* Fuentes y reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Elimina el margen y padding por defecto y establece el modelo de caja estándar */
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Define la fuente para el cuerpo del documento */
+  background-color: #f8f8f8; /* Fondo claro para el cuerpo */
+  color: #333; /* Color del texto principal */
+  line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Contenedor reutilizable */
+.container {
+  width: 90%; /* Ancho del contenedor como el 90% del ancho de la página */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #ff4d4d; /* Fondo rojo para el encabezado */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  color: white; /* Color del texto blanco */
+}
+
+header h1 {
+  font-size: 2.5rem; /* Tamaño grande para el título principal */
+  text-transform: uppercase; /* Convierte el texto del título en mayúsculas */
+}
+
+nav ul {
+  list-style: none; /* Elimina el estilo de lista (puntos) */
+  display: flex; /* Los elementos se alinean en fila */
+  justify-content: center; /* Centra el menú de navegación horizontalmente */
+}
+
+nav ul li {
+  margin: 0 15px; /* Añade espacio entre los elementos del menú */
+}
+
+nav ul li a {
+  color: white; /* Los enlaces del menú son blancos */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: 600; /* Hace el texto de los enlaces más grueso */
+  transition: color 0.4s ease; /* Efecto de transición suave en el color */
+}
+
+nav ul li a:hover {
+  color: #ffdb4d; /* Cambia el color del enlace al pasar el ratón (hover) */
+}
+
+/* Sección del héroe */
+#hero {
+  background-image: url("hero-bg.jpg"); /* Imagen de fondo para la sección del héroe */
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen de fondo */
+  height: 60vh; /* La sección del héroe ocupa el 60% de la altura de la ventana */
+  display: flex; /* Flexbox para alinear el contenido */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: white; /* El texto en la sección del héroe es blanco */
+  text-align: center; /* El texto está alineado al centro */
+  position: relative; /* Establece posición relativa para usar el pseudo-elemento ::after */
+}
+
+#hero::after {
+  content: ""; /* Pseudo-elemento para agregar una capa oscura sobre la imagen */
+  position: absolute; /* Posiciona el pseudo-elemento sobre toda la sección */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
+}
+
+.hero-content {
+  z-index: 1; /* Asegura que el contenido del héroe esté encima de la capa oscura */
+}
+
+#hero h2 {
+  font-size: 3rem; /* Tamaño grande para el título en la sección del héroe */
+  margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+#hero p {
+  font-size: 1.2rem; /* Tamaño de fuente mediana para el texto descriptivo */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.cta-button {
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: #ffdb4d; /* Color de fondo del botón */
+  color: #333; /* Color de texto del botón */
+  text-transform: uppercase; /* Texto del botón en mayúsculas */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina subrayado del enlace */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el hover */
+}
+
+.cta-button:hover {
+  background-color: #ffcc00; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al hacer hover */
+}
+
+/* Sección de contenido general */
+.contenido {
+  padding: 60px 0; /* Espaciado superior e inferior para la sección */
+}
+
+h2 {
+  text-align: center; /* Centra el texto de los títulos */
+  font-size: 2.5rem; /* Tamaño grande para los títulos */
+  margin-bottom: 40px; /* Espaciado inferior */
+  color: #333; /* Color de texto oscuro */
+}
+
+.menu-items, .promo-items {
+  display: flex; /* Muestra los elementos en fila */
+  justify-content: space-around; /* Distribuye los elementos equitativamente */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+}
+
+.tarjeta {
+  background-color: #fff; /* Fondo blanco para las tarjetas */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  width: 300px; /* Ancho fijo para cada tarjeta */
+  text-align: center; /* Texto centrado en cada tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+  margin-bottom: 20px; /* Espaciado inferior entre las tarjetas */
+  transition: transform 0.3s ease; /* Efecto de transición suave al hacer hover */
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al hacer hover */
+}
+
+.tarjeta h3 {
+  font-size: 1.5rem; /* Tamaño del título de la tarjeta */
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #ff4d4d; /* Color del título de la tarjeta */
+}
+
+.tarjeta p {
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #555; /* Color del texto de las tarjetas */
+}
+
+.tarjeta .price {
+  font-size: 1.2rem; /* Tamaño de la fuente del precio */
+  color: #333; /* Color del precio */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Sección de promociones con fondo claro */
+.bg-light {
+  background-color: #f0f0f0; /* Fondo gris claro para secciones */
+}
+
+/* Sección de contacto */
+.socials {
+  list-style: none; /* Elimina los puntos de la lista */
+  display: flex; /* Muestra los elementos en fila */
+  justify-content: center; /* Centra los íconos de redes sociales */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.socials li {
+  margin: 0 10px; /* Espacio entre cada ícono de red social */
+}
+
+.socials li a {
+  text-decoration: none; /* Elimina el subrayado en los enlaces */
+  font-weight: 600; /* Negrita en los enlaces de redes sociales */
+  color: #ff4d4d; /* Color de texto para los enlaces */
+}
+
+.socials li a:hover {
+  color: #ffcc00; /* Cambia el color del enlace al pasar el ratón */
+}
+
+/* Estilos para el ícono de WhatsApp */
+.whatsapp {
+  text-align: center; /* Centra el ícono de WhatsApp */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.whatsapp a {
+  display: inline-block; /* Hace que el enlace sea un bloque en línea */
+  color: white; /* Texto blanco */
+  background-color: #25D366; /* Color verde de WhatsApp */
+  padding: 10px 20px; /* Espaciado interno *
+/
+border-radius: 50px; /* Bordes redondeados en forma de píldora */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.whatsapp a i {
+  margin-right: 8px; /* Espaciado a la derecha del ícono */
+}
+
+.whatsapp a:hover {
+  background-color: #22c65b; /* Color más oscuro al hacer hover */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+/* Pie de página */
+footer {
+  background-color: #333; /* Fondo oscuro para el pie de página */
+  color: white; /* Texto blanco */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

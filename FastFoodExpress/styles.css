@@ -218,16 +218,11 @@ footer {
   text-align: center;
 }
 
-.contenido-horarios {
+.horario {
   display: flex;
-  gap: 5px;
-}
-
-.contenido-horarios h3{
-  padding: 20px;
-  color: grey;
-  text-align: center;
-  font-size: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1px; /* Espacio entre cada tarjeta */
 }
 
 .dia h4 {

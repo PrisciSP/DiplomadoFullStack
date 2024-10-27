@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #aeb6bf;
+}
+
+header {
+    color: black;
+    /* Texto blanco */
+
+    text-align: center;
+    /* Alinea el texto al centro */
+    font-size: large;
+}
+
+hr {
+    background: #ecff33;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centra el contenido horizontalmente */
+    padding: 20px;
+    /* Relleno interno */
+}
+
+.container h2 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    /* Centra los enlaces horizontalmente */
+    padding: 10px;
+    /* Espaciado dentro de la barra */
+}
+
+/* Estilo para los enlaces de la navegación */
+nav a {
+    color: rgb(20, 17, 17);
+    /* Color de texto blanco */
+    font-size: 15px;
+    font-weight: bold;
+    font-style: oblique;
+    padding: 5px 20px;
+    /* Relleno interno de los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado */
+    margin: 0 10px;
+    /* Espacio entre los enlaces */
+    background: #ecff33;
+    border-radius: 5px;
+}
+
+/* Cambia el fondo del enlace cuando se pasa el cursor por encima */
+nav a:hover {
+    background-color: #148623;
+}
+
+section {
+    padding: 20px;
+    background-color: rgb(222, 238, 225);
+    /* Fondo blanco */
+    margin-bottom: 20px;
+    /* Espacio debajo de la sección */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para darle profundidad */
+}
+
+.container-img {
+    text-align: center;
+    /* Centra el contenido en línea */
+}
+
+.img-inicio {
+    display: block;
+    /* Hace que la imagen sea un bloque */
+    margin: 10px auto;
+    /* Centra la imagen dentro del contenedor */
+    border-radius: 5px;
+}
+
+.btn-contacto {
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #230980;
+    color: rgb(248, 21, 5);
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px; /* Espacio entre los botones */
+}
+.btn-facebook {
+    background-color: #3b5998; /* Color de Facebook */
+}
+.btn-twitter {
+    background-color: #1da1f2; /* Color de Twitter */
+}
+.btn-instagram {
+    background-color: #e1306c; /* Color de Instagram */
+}
+.btn-youtube {
+    background-color: #ff0000; /* Color de YouTube */
+}
+.btn i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    align-self: center;
+    width: 100%;
+    max-width: 100px;
+}

@@ -120,20 +120,20 @@ h2 {
 }
 
 .menu-items, .promo-items {
-  display: flex; /* Muestra los elementos en fila */
-  justify-content: space-around; /* Distribuye los elementos equitativamente */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre cada tarjeta */
 }
 
 .tarjeta {
-  background-color: #fff; /* Fondo blanco para las tarjetas */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  width: 300px; /* Ancho fijo para cada tarjeta */
-  text-align: center; /* Texto centrado en cada tarjeta */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
-  margin-bottom: 20px; /* Espaciado inferior entre las tarjetas */
-  transition: transform 0.3s ease; /* Efecto de transición suave al hacer hover */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .tarjeta:hover {
@@ -147,7 +147,7 @@ h2 {
 }
 
 .tarjeta p {
-  margin-bottom: 10px; /* Espaciado inferior */
+  margin-bottom: 5px; /* Espaciado inferior */
   color: #555; /* Color del texto de las tarjetas */
 }
 
@@ -194,9 +194,8 @@ h2 {
   display: inline-block; /* Hace que el enlace sea un bloque en línea */
   color: white; /* Texto blanco */
   background-color: #25D366; /* Color verde de WhatsApp */
-  padding: 10px 20px; /* Espaciado interno *
-/
-border-radius: 50px; /* Bordes redondeados en forma de píldora */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 50px; /* Bordes redondeados en forma de píldora */
   text-decoration: none; /* Elimina el subrayado del enlace */
   font-weight: bold; /* Texto en negrita */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave al hacer hover */
@@ -217,6 +216,38 @@ footer {
   color: white; /* Texto blanco */
   padding: 20px 0; /* Espaciado superior e inferior */
   text-align: center;
+}
+
+.contenido-horarios {
+  display: flex;
+  gap: 5px;
+}
+
+.contenido-horarios h3{
+  padding: 20px;
+  color: grey;
+  text-align: center;
+  font-size: 30px;
+}
+
+.dia h4 {
+  padding: 10px;
+  width: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: moccasin;
+  text-align: center;
+}
+
+.dia p{
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */

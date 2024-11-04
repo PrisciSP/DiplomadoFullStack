@@ -1,29 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Elimina el margen y padding por defecto y establece el modelo de caja estándar */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #aeb6bf;
+    background-color: #23344d;
 }
 
 header {
-    color: black;
-    /* Texto blanco */
-
-    text-align: center;
-    /* Alinea el texto al centro */
+    color: whitesmoke; /* Texto blanco */
+    text-align: center; /* Alinea el texto al centro */
     font-size: large;
 }
 
 hr {
-    background: #ecff33;
+    margin: 10px 0 10px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    /* Centra el contenido horizontalmente */
-    padding: 20px;
-    /* Relleno interno */
+    width: 90%; /* Ancho del contenedor como el 90% del ancho de la página */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 .container h2 {
@@ -40,7 +41,7 @@ nav {
 
 /* Estilo para los enlaces de la navegación */
 nav a {
-    color: rgb(20, 17, 17);
+    color: #1C1C1C;
     /* Color de texto blanco */
     font-size: 15px;
     font-weight: bold;
@@ -49,9 +50,9 @@ nav a {
     /* Relleno interno de los enlaces */
     text-decoration: none;
     /* Elimina el subrayado */
-    margin: 0 10px;
+    margin: 10px 10px;
     /* Espacio entre los enlaces */
-    background: #ecff33;
+    background: #FFE91F;
     border-radius: 5px;
 }
 
@@ -78,11 +79,12 @@ section {
 }
 
 .img-inicio {
-    display: block;
-    /* Hace que la imagen sea un bloque */
-    margin: 10px auto;
-    /* Centra la imagen dentro del contenedor */
-    border-radius: 5px;
+    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta a tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
 }
 
 .btn-contacto {
@@ -149,4 +151,12 @@ form button {
     align-self: center;
     width: 100%;
     max-width: 100px;
+}
+
+footer {
+    background-color: #FFE91F; /* Fondo oscuro para el pie de página */
+    color: #1C1C1C; /* Texto blanco */
+    padding: 5px 0; /* Espaciado superior e inferior */
+    text-align: center;
+    margin-top: 10px;    
 }

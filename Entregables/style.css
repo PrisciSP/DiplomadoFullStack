@@ -1,57 +1,53 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Elimina el margen y padding por defecto y establece el modelo de caja estándar */
+    box-sizing:border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #23344d;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
 }
 
 header {
+    background: #1C1C1C;
     color: whitesmoke; /* Texto blanco */
     text-align: center; /* Alinea el texto al centro */
     font-size: large;
+    padding: 20px;
 }
 
 hr {
     margin: 10px 0 10px;
 }
 
-.container {
-    width: 90%; /* Ancho del contenedor como el 90% del ancho de la página */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-}
-
-.container h2 {
-    text-align: center;
-}
-
 nav {
     display: flex;
     justify-content: center;
-    /* Centra los enlaces horizontalmente */
+    align-items: center;
+    margin-top: auto;
+    flex-direction: column;
     padding: 10px;
-    /* Espaciado dentro de la barra */
+}
+
+nav h1 {
+    color: #1C1C1C;
+    font-size: 50px;
 }
 
 /* Estilo para los enlaces de la navegación */
 nav a {
-    color: #1C1C1C;
-    /* Color de texto blanco */
+    color: #1C1C1C; /* Color de texto blanco */
     font-size: 15px;
     font-weight: bold;
     font-style: oblique;
-    padding: 5px 20px;
-    /* Relleno interno de los enlaces */
-    text-decoration: none;
-    /* Elimina el subrayado */
-    margin: 10px 10px;
-    /* Espacio entre los enlaces */
+    padding: 5px 20px; /* Relleno interno de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    margin: 10px 10px; /* Espacio entre los enlaces */
     background: #FFE91F;
     border-radius: 5px;
 }
@@ -59,32 +55,30 @@ nav a {
 /* Cambia el fondo del enlace cuando se pasa el cursor por encima */
 nav a:hover {
     background-color: #148623;
+    color: aliceblue;
 }
 
 section {
-    padding: 20px;
-    background-color: rgb(222, 238, 225);
-    /* Fondo blanco */
-    margin-bottom: 20px;
-    /* Espacio debajo de la sección */
-    border-radius: 8px;
-    /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil para darle profundidad */
+    flex-grow: 1; /* Permite que la sección principal crezca para llenar el espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-img {
-    text-align: center;
-    /* Centra el contenido en línea */
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    padding: 10px;
+    margin: 0 auto;
+    flex-direction: row; /* Cambiar a fila */
 }
 
-.img-inicio {
-    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta a tu imagen */
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
-    margin: 0; /* Elimina márgenes por defecto */
+.container-img img {
+    max-width: 80%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 500px; /* O puedes especificar un ancho fijo aquí */
+    border-radius: 10px;
 }
 
 .btn-contacto {
@@ -100,63 +94,94 @@ section {
 }
 
 .btn {
-    padding: 10px 15px;
+    padding: 5px 10px;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
-    align-items: center;
     text-decoration: none;
-    margin: 5px; /* Espacio entre los botones */
-}
-.btn-facebook {
-    background-color: #3b5998; /* Color de Facebook */
-}
-.btn-twitter {
-    background-color: #1da1f2; /* Color de Twitter */
-}
-.btn-instagram {
-    background-color: #e1306c; /* Color de Instagram */
-}
-.btn-youtube {
-    background-color: #ff0000; /* Color de YouTube */
-}
-.btn i {
-    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    margin-left: 10px;
 }
 
-
-/* Estilo del formulario */
-form {
+/* Botones de redes sociales */
+.social-buttons {
     display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    padding: 10px 0; /* Espaciado dentro del contenedor */
+    background: rgb(94, 92, 92); /* Fondo de los botones */
+    margin: 0; /* Elimina márgenes para que esté justo arriba del footer */
+}
+
+.btn-facebook {background-color: #1C1C1C; /* Color de Facebook */}
+.btn-twitter {background-color: #1C1C1C; /* Color de Twitter */}
+.btn-instagram {background-color: #1C1C1C; /* Color de Instagram */}
+.btn-youtube {background-color: #1C1C1C; /* Color de YouTube */}
+.btn i {margin-right: 8px; /* Espacio entre el ícono y el texto */}
+
+.btn-facebook:hover {background-color: #3b5998;}
+.btn-twitter:hover {background-color: #1da1f2;}
+.btn-instagram:hover {background-color: #e1306c;}
+.btn-youtube:hover {background-color: #ff0000;}
+
+.container {
+    display: flex;
+    background: lemonchiffon;
+    color: #1C1C1C;
+    border-radius: 20px;
+    width: 1000px;
+    margin: auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Relleno interno */
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+}
+
+.form-section {
+    background-color: lemonchiffon; /* Fondo blanco */
+    padding: 20px; /* Relleno interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.form {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
 }
 
 form label {
     margin-bottom: 5px;
+    font-weight: bold; /* Añade negrita a las etiquetas */
 }
 
-form input,
-form textarea {
+form input, form textarea {
     margin-bottom: 15px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background: white;
 }
 
 form button {
-    align-self: center;
-    width: 100%;
-    max-width: 100px;
+    align-self: center; /* Centra el botón */
+    width: 100%; /* Botón ocupa todo el ancho del formulario */
+    max-width: 200px; /* Ancho máximo del botón */
+    padding: 10px;
+    background-color: #230980; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+form button:hover {
+    background-color: #148623; /* Color al pasar el ratón */
+}
+
+.container h2 {
+    text-align  : center;
 }
 
 footer {
-    background-color: #FFE91F; /* Fondo oscuro para el pie de página */
-    color: #1C1C1C; /* Texto blanco */
-    padding: 5px 0; /* Espaciado superior e inferior */
+    background-color: #1C1C1C;
+    color: #FFE91F;
     text-align: center;
-    margin-top: 10px;    
+    padding: 5px; /* Espaciado superior e inferior */
 }

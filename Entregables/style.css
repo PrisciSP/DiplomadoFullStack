@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     background-color: white;
     display: flex;
@@ -21,15 +21,18 @@ header {
     padding: 20px;
 }
 
-hr {
-    margin: 10px 0 10px;
+.divider {
+    margin: 5px 0 5px;
+    width: auto;
+    height: 5px;
+    background: #1C1C1C;
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
+    margin: 10px auto;
     flex-direction: column;
     padding: 10px;
 }
@@ -44,7 +47,6 @@ nav a {
     color: #1C1C1C; /* Color de texto blanco */
     font-size: 15px;
     font-weight: bold;
-    font-style: oblique;
     padding: 5px 20px; /* Relleno interno de los enlaces */
     text-decoration: none; /* Elimina el subrayado */
     margin: 10px 10px; /* Espacio entre los enlaces */
@@ -61,6 +63,7 @@ nav a:hover {
 section {
     flex-grow: 1; /* Permite que la sección principal crezca para llenar el espacio */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -106,7 +109,7 @@ section {
 .social-buttons {
     display: flex;
     justify-content: center; /* Centra los botones horizontalmente */
-    padding: 10px 0; /* Espaciado dentro del contenedor */
+    padding: 10px; /* Espaciado dentro del contenedor */
     background: rgb(94, 92, 92); /* Fondo de los botones */
     margin: 0; /* Elimina márgenes para que esté justo arriba del footer */
 }
@@ -124,13 +127,57 @@ section {
 
 .container {
     display: flex;
-    background: lemonchiffon;
-    color: #1C1C1C;
+    background: rgb(94, 92, 92);
+    color: #FFFFFF;
     border-radius: 20px;
-    width: 1000px;
-    margin: auto; /* Centra el contenido horizontalmente */
+    width: 95%;
+    max-width: 1000px;
+    margin: 10px auto; /* Centra el contenido horizontalmente */
     padding: 20px; /* Relleno interno */
     flex-direction: column;
+}
+
+.container-about {
+    display: flex;
+    background: #1C1C1C;
+    color: #FFFFFF;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.container-about h1 {
+    font-size: 60px;
+}
+
+.container-about h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.container-about p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.container-about ul {
+    margin-bottom: 10px
+}
+
+.container-about li {
+    margin-left: 30px;
+}
+
+.divider-about {
+    margin: 10px;
+    width: 30px;
+    height: 5px;
+    background: #FFE91F;
+    border-color: #FFE91F;
+    border-radius: 3px;
 }
 
 .form-section {
@@ -164,7 +211,7 @@ form button {
     width: 100%; /* Botón ocupa todo el ancho del formulario */
     max-width: 200px; /* Ancho máximo del botón */
     padding: 10px;
-    background-color: #230980; /* Color del botón */
+    background-color: #1C1C1C; /* Color del botón */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 4px; /* Bordes redondeados */
@@ -184,4 +231,5 @@ footer {
     color: #FFE91F;
     text-align: center;
     padding: 5px; /* Espaciado superior e inferior */
+    margin-top: auto;
 }
